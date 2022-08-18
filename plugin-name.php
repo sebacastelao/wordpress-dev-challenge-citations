@@ -7,17 +7,17 @@
  * This file is responsible for starting the plugin using the main plugin class file.
  *
  * @since 0.0.1
- * @package Plugin_Name
+ * @package Citation
  *
  * @wordpress-plugin
- * Plugin Name:     Plugin Name
- * Description:     This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:     Citation Meta Box
+ * Description:     Add Custom Meta Box to Posts in wp-admin. Create shortcode [citation].
  * Version:         0.0.1
- * Author:          Your Name
+ * Author:          Sebastian Castellucci - sebacastellucci@gmail.com
  * Author URI:      https://www.example.com
  * License:         GPL-2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:     plugin-name
+ * Text Domain:     Citation Meta Box
  * Domain Path:     /lang
  */
 
@@ -25,18 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access not permitted.' );
 }
 
-if ( ! class_exists( 'plugin_name' ) ) {
+if ( ! class_exists( 'citation' ) ) {
 
 	/*
-	 * main plugin_name class
+	 * main citation class
 	 *
-	 * @class plugin_name
+	 * @class citation
 	 * @since 0.0.1
 	 */
-	class plugin_name {
+	class citation {
 
 		/*
-		 * plugin_name plugin version
+		 * citation plugin version
 		 *
 		 * @var string
 		 */
@@ -45,17 +45,17 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		/**
 		 * The single instance of the class.
 		 *
-		 * @var plugin_name
+		 * @var citation
 		 * @since 0.0.1
 		 */
 		protected static $instance = null;
 
 		/**
-		 * Main plugin_name instance.
+		 * Main citation instance.
 		 *
 		 * @since 0.0.1
 		 * @static
-		 * @return plugin_name - main instance.
+		 * @return citation - main instance.
 		 */
 		public static function instance() {
 			if ( is_null( self::$instance ) ) {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		}
 
 		/**
-		 * plugin_name class constructor.
+		 * citation class constructor.
 		 */
 		public function __construct() {
 			$this->load_plugin_textdomain();
@@ -100,29 +100,29 @@ if ( ! class_exists( 'plugin_name' ) ) {
 
 
 		/**
-		 * Define plugin_name constants
+		 * Define citation constants
 		 */
 		private function define_constants() {
-			define( 'PLUGIN_NAME_PLUGIN_FILE', __FILE__ );
-			define( 'PLUGIN_NAME_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-			define( 'PLUGIN_NAME_VERSION', $this->version );
-			define( 'PLUGIN_NAME_PATH', $this->plugin_path() );
+			define( 'CITATION_PLUGIN_FILE', __FILE__ );
+			define( 'CITATION_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+			define( 'CITATION_VERSION', $this->version );
+			define( 'CITATION_PATH', $this->plugin_path() );
 		}
 
 		/**
-		 * Define plugin_name actions
+		 * Define citation actions
 		 */
 		public function define_actions() {
 			//
 		}
 
 		/**
-		 * Define plugin_name menus
+		 * Define citation menus
 		 */
 		public function define_menus() {
             //
 		}
 	}
 
-	$plugin_name = new plugin_name();
+	$citation = new citation();
 }
