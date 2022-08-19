@@ -83,7 +83,7 @@ if ( ! class_exists( 'citation' ) ) {
 		 */
 		public function includes() {
             // Example
-// 			require_once __DIR__ . '/includes/loader.php';
+			require_once __DIR__ . '/includes/list-table-url.php';
 
 			// Load custom functions and hooks
 			require_once __DIR__ . '/includes/includes.php';
