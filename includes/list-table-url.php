@@ -443,7 +443,7 @@ class TT_Example_List_Table extends WP_List_Table {
  * menu item to the bottom of the admin menus.
  */
 function tt_add_menu_items(){
-    add_menu_page('Example Plugin List Table', 'List Table Example', 'activate_plugins', 'tt_list_test', 'tt_render_list_page');
+    add_menu_page('Url Plugin List Table', 'Bad URLs Table', 'activate_plugins', 'tt_list_test', 'tt_render_list_page');
 } add_action('admin_menu', 'tt_add_menu_items');
 
 
